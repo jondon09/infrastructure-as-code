@@ -1,6 +1,6 @@
 [
 	{
-		"ParameterKey": "EnvironmentName",
+		"ParameterKey": "ENV",
 		"ParameterValue": "Dev"
 	},
 	{
@@ -26,7 +26,4 @@
 		"ParameterValue": "10.0.3.0/24"
 
 	}
-
-
-
 ]
