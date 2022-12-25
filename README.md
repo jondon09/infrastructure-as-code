@@ -1,16 +1,16 @@
 ### Project Title - Deploy a high-availability web app using CloudFormation
 
-This folder provides the starter code for the "ND9991 - C2- Infrastructure as Code - Deploy a high-availability web app using CloudFormation" project. This folder contains the following files:
+Infrastructure as Code - Deploy a high-availability web app using CloudFormation" project. This folder contains the following files:
 
-#### final-project-starter.yml
+#### baseStack.yml
 
-Students have to write the CloudFormation code using this YAML template for building the cloud infrastructure, as required for the project.
+baseStack.yml holds the infrastructure code.
 
-#### server-parameters.json
+#### baseParam.json
 
-Students may use a JSON file for increasing the generic nature of the YAML code. For example, the JSON file contains a "ParameterKey" as "EnvironmentName" and "ParameterValue" as "UdacityProject".
+Students may use a JSON file for increasing the generic nature of the YAML code. For example, the JSON file contains a "ParameterKey" as "ENV" and "ParameterValue" as "Dev".
 
-In YAML code, the `${EnvironmentName}` would be substituted with `UdacityProject` accordingly.
+In YAML code, the `${ENV}` would be substituted with `Dev` accordingly.
 
 endpoint for deployed application
 
