@@ -23,23 +23,21 @@ Infrastructure as Code (IaC) project that deploys a production-grade, highly ava
 
 ```
 .
-├── templates/                      # CloudFormation templates
-│   ├── network.yml                 # VPC, subnets, NAT gateways, route tables
-│   └── application.yml             # ALB, ASG, security groups, IAM roles
-├── parameters/                     # Stack parameters by environment
+├── templates/
+│   ├── network.yml
+│   └── application.yml
+├── parameters/
 │   └── dev/
-│       ├── network.json            # Network CIDR ranges and environment name
-│       └── application.json        # Application environment configuration
-├── scripts/                        # Deployment automation
-│   ├── create-stack.sh             # Create stack (Linux/macOS)
-│   ├── update-stack.sh             # Update stack (Linux/macOS)
-│   ├── delete-stack.sh             # Delete stack (Linux/macOS)
-│   ├── create-stack.bat            # Create stack (Windows)
-│   ├── update-stack.bat            # Update stack (Windows)
-│   └── delete-stack.bat            # Delete stack (Windows)
-├── docs/                           # Documentation and diagrams
-│   ├── architecture.png            # Architecture diagram (PNG)
-│   └── architecture.svg            # Architecture diagram (SVG)
+│       ├── network.json
+│       └── application.json
+├── scripts/
+│   ├── create-stack.sh
+│   ├── update-stack.sh
+│   ├── delete-stack.sh
+│
+├── docs/
+│   ├── architecture.png
+│   └── architecture.svg
 └── README.md
 ```
 
@@ -47,7 +45,7 @@ Infrastructure as Code (IaC) project that deploys a production-grade, highly ava
 
 ## Prerequisites
 
-- [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed and configured
+- AWS CLI_V2
 - AWS IAM credentials with permissions to create VPC, EC2, ELB, IAM, and CloudFormation resources
 - An S3 bucket containing the application artifact (`travel-site.zip`)
 
@@ -129,12 +127,3 @@ The application stack consumes the following exports from the network stack:
 | `${ENV}-PRIV-SUBNETS` | Private subnet IDs (comma-separated) |
 | `${ENV}-PUBLIC-SUBNET1` | Public Subnet 1 ID |
 | `${ENV}-PUBLIC-SUBNET2` | Public Subnet 2 ID |
-
-## Built With
-
-- [AWS CloudFormation](https://aws.amazon.com/cloudformation/) - Infrastructure as Code
-- [AWS VPC](https://aws.amazon.com/vpc/) - Network isolation
-- [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) - Application Load Balancer
-- [Amazon EC2 Auto Scaling](https://aws.amazon.com/ec2/autoscaling/) - Compute scaling
-- [Amazon S3](https://aws.amazon.com/s3/) - Artifact storage
- 
